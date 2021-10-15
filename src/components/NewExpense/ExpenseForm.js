@@ -24,7 +24,7 @@ function ExpenseForm (props) {// When the button is pressed, the form gets submi
         event.preventDefault();
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
         props.onSaveExpenseData(expenseData)   // We can execute it here, even if this function is not present in this component, because we are passing a prop from a level up
